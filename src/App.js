@@ -16,6 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/trending" element={<Trending/>} />
         <Route path="/generate" element={<Generate/>} />
+        <Route path="/picsmart" element={<Home/>} />
         <Route path="/*" element={<Error />} />
       </Routes>
     </div>

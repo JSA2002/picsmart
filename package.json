@@ -1,5 +1,6 @@
 {
   "name": "picsmart",
+  "homepage": "https://jsa2002.github.io/picsmart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
