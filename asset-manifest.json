@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/picsmart/static/css/main.c60e29be.css",
+    "main.js": "/picsmart/static/js/main.7038b470.js",
+    "static/media/bg5.jpg": "/picsmart/static/media/bg5.0758c70bfc66255f28b6.jpg",
+    "static/media/bg7.jpg": "/picsmart/static/media/bg7.6bb8462e4f14d2d86f8b.jpg",
+    "static/media/bg4.jpg": "/picsmart/static/media/bg4.63714373cfad721243e0.jpg",
+    "index.html": "/picsmart/index.html",
+    "main.c60e29be.css.map": "/picsmart/static/css/main.c60e29be.css.map",
+    "main.7038b470.js.map": "/picsmart/static/js/main.7038b470.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c60e29be.css",
+    "static/js/main.7038b470.js"
+  ]
+}
