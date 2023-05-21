@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import Spinner from './Spinner.gif'
 
 function Home() {
   const [count, setCount] = useState(1);
+  const [spin, setSpin] = useState(false);
   //fetched image unsplash 60perhour
   const [res, setRes] = useState([])
   const [value1, setValue1] = useState("");
@@ -18,7 +21,11 @@ function Home() {
   }
 
   const fetchImage = () => {
-    fetchImagesUn()
+    setSpin(true);
+    fetchImagesUn();
+    setTimeout(()=>{
+         setSpin(false);
+    },7000);
   }
   return (
     <>
@@ -38,11 +45,17 @@ function Home() {
           <button type='submit' className='button' onClick={fetchImage}>Search</button>
           {(count > 1) && <span onClick={() => { setCount(count - 1) }}><svg id='addButton' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill='#fff' d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM184 232H328c13.3 0 24 10.7 24 24s-10.7 24-24 24H184c-13.3 0-24-10.7-24-24s10.7-24 24-24z" /></svg></span>}
         </div>
+        <div>
+          {spin && <img src={Spinner} alt="Spinner" className='spinner'/>}
+        </div>
       </div>
       <div className='gallery'>
         {
           res.map((e)=>{
-            return <img src={e.urls.regular} key={e.id} alt="images" className='images'></img>
+            return (<div key={e.id} className='beforeImages'>
+            <img src={e.urls.regular} alt="images" className='images'></img>
+            <button className='downloadbtn'><Link style={{ textDecoration: 'none', color: '#fff' }} to={`${e.urls.regular}&dl=${e.user.first_name}-${e.user.last_name}-${e.id}-unsplash.jpg`}> Download</Link></button>
+          </div>)
           })
         }
       </div>

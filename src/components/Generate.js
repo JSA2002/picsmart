@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Configuration, OpenAIApi } from "openai";
+import React from 'react'
+/*import { Configuration, OpenAIApi } from "openai";
+import Spinner from './Spinner.gif'
 
 function Generate() {
   //sizes
@@ -8,20 +9,20 @@ function Generate() {
     setSize(event.target.value);
   }
 
-
+  const [spin, setSpin] = useState(false);
   const [userPrompt, setUserPrompt] = useState("")
   const [imageUrl1, setImageUrl1] = useState("")
   const [imageUrl2, setImageUrl2] = useState("")
   const [imageUrl3, setImageUrl3] = useState("")
   const [imageUrl4, setImageUrl4] = useState("")
   const [size, setSize] = useState("256x256")
-  //const [loading, SetLoading] = useState("false");
+  const [head,setHead] = useState(false);
   const configuration = new Configuration({
-    organization: "org-B0LcVtQvLQI0XyrGr08g09iA",
-    apiKey: "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",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(configuration);
   const generateImage = async () => {
+    setSpin(true);
     const imageParameters = {
       prompt: userPrompt,
       n: 4,
@@ -37,15 +38,16 @@ function Generate() {
     setImageUrl2(urlData2);
     setImageUrl3(urlData3);
     setImageUrl4(urlData4);
-    //SetLoading(false)
+    setTimeout(() => {
+      setSpin(false);
+    }, 5000)
   }
+    
   return (
     <div className='generate'>
       <div className='geneInput'>
-        <input className='gInput'
-          placeholder='Type here : Eg. A sunset on Sydney Opera House'
-          onChange={(e) => setUserPrompt(e.target.value)}
-        />
+        <input className='gInput' placeholder='Type here : Eg. A sunset on Sydney Opera House'
+          onChange={(e) => setUserPrompt(e.target.value)} />
         <select onChange={onOptionChangeHandler} className='gSize'>
           <option>Select size</option>
           {options.map((option, index) => {
@@ -54,7 +56,10 @@ function Generate() {
             </option>
           })}
         </select>
-        <button onClick={() => generateImage()} className="butGenerate">Generate</button>
+        <button onClick={() => error()} className="butGenerate">Generate</button>
+      </div>
+      <div>
+        {spin && <img src={Spinner} alt='Spinner' className='spinner'></img>}
       </div>
       <div className='centreGenerate'>
         {
@@ -78,9 +83,14 @@ function Generate() {
             : <></>
         }
       </div>
-
-    </div>
-  )
+      </div>
+      )
+    }*/
+function Generate() {
+  return (
+    <h1 className='search' id='heading' style={{"top":"0","backgroundColor":"black","height":"100vh"}}>Server Unavailable</h1>
+      )
 }
 
-export default Generate
+
+export default Generate;
