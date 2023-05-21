@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/picsmart/static/css/main.c60e29be.css",
-    "main.js": "/picsmart/static/js/main.7038b470.js",
+    "main.css": "/picsmart/static/css/main.7e33f405.css",
+    "main.js": "/picsmart/static/js/main.17ed0069.js",
     "static/media/bg5.jpg": "/picsmart/static/media/bg5.0758c70bfc66255f28b6.jpg",
+    "static/media/error.png": "/picsmart/static/media/error.8b55aba4d0bd2e450127.png",
     "static/media/bg7.jpg": "/picsmart/static/media/bg7.6bb8462e4f14d2d86f8b.jpg",
     "static/media/bg4.jpg": "/picsmart/static/media/bg4.63714373cfad721243e0.jpg",
+    "static/media/Spinner.gif": "/picsmart/static/media/Spinner.af1b9ad6ad721bb4d64b.gif",
     "index.html": "/picsmart/index.html",
-    "main.c60e29be.css.map": "/picsmart/static/css/main.c60e29be.css.map",
-    "main.7038b470.js.map": "/picsmart/static/js/main.7038b470.js.map"
+    "main.7e33f405.css.map": "/picsmart/static/css/main.7e33f405.css.map",
+    "main.17ed0069.js.map": "/picsmart/static/js/main.17ed0069.js.map"
   },
   "entrypoints": [
-    "static/css/main.c60e29be.css",
-    "static/js/main.7038b470.js"
+    "static/css/main.7e33f405.css",
+    "static/js/main.17ed0069.js"
   ]
 }
